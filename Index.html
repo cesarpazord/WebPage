@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Overview</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Main Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="PersonalInfo.html">Personal Info</a></li>
+                <li><a href="PersonalSchedule.html">Personal Schedule</a></li>
+                <li><a href="CV.html">CV</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Profile Section -->
+        <section>
+            <div>
+                <!-- Asegúrate de colocar tu foto con este nombre o cambia la ruta -->
+                <img src="Resoruces/Profile.jpeg" alt="Profile Photo" width="250">
+            </div>
+        </section>
+
+        <!-- Technical Overviews: IPv6 & SRv6 -->
+        <article>
+            <h2>Networking Overview: IPv6 & SRv6</h2>
+
+            <!-- IPv6 Explanation -->
+            <section>
+                <h3>What is IPv6?</h3>
+                <p>
+                    <strong>Internet Protocol version 6 (IPv6)</strong> is the next-generation network layer protocol created by the Internet Engineering Task Force (IETF) to replace IPv4. While IPv4 uses 32-bit addresses—limiting the global pool to roughly 4.3 billion addresses—IPv6 utilizes a massive <strong>128-bit address space</strong>, providing around 3.4 × 10<sup>38</sup> distinct addresses.
+                </p>
+                <p>
+                    In addition to solving IP exhaustion, IPv6 streamlines packet processing through a fixed 40-byte header, eliminates the architectural bottlenecks of Network Address Translation (NAT), and provides native support for stateless address autoconfiguration (SLAAC) and multicast communications.
+                </p>
+            </section>
+
+            <!-- SRv6 Explanation -->
+            <section>
+                <h3>What is SRv6 (Segment Routing over IPv6)?</h3>
+                <p>
+                    <strong>SRv6 (Segment Routing over IPv6)</strong> is a source-routing architecture implemented natively on the IPv6 data plane. Instead of requiring transit routers to maintain end-to-end path states or rely on complex signaling protocols (like MPLS, RSVP-TE, or LDP), the ingress node encodes the network path instructions directly into the packet header.
+                </p>
+                <p>
+                    This is accomplished using an IPv6 extension header called the <strong>Segment Routing Header (SRH)</strong>, which contains an ordered list of 128-bit Segment Identifiers (SIDs). Each SID behaves as an explicit instruction: it can direct the packet to a specific node, enforce a strict traffic-engineered path, or execute a specialized network function (such as firewall filtering or VPN endpoint decapsulation). SRv6 simplifies network architectures by unifying routing and service delivery entirely within native IPv6.
+                </p>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 -Cesar Paz All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

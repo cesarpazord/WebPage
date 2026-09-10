@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+:root {
+    --asus-bg: #0a0a0a;           
+    --asus-card: #161616;         
+    --asus-blue: #0078d7;         
+    --asus-blue-hover: #00b8d9;   
+    --text-main: #f5f5f5;         
+    --text-muted: #a0a0a0;        
+    --border-color: #2a2a2a;      
+}
+
+
+body {
+    background-color: var(--asus-bg);
+    color: var(--text-main);
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Tipografía */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 40px;
+    /* Efecto de texto metálico/brillante */
+    background: linear-gradient(90deg, #ffffff, var(--text-muted));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2 {
+    color: var(--text-main);
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: var(--asus-blue);
+    font-weight: 600;
+}
+
+ul {
+    color: var(--text-muted);
+}
+
+strong {
+    color: var(--text-main);
+}
+
+
+header {
+    background-color: rgba(10, 10, 10, 0.85);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(12px); /* Efecto cristalino */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 0;
+    padding: 20px;
+}
+
+header nav a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--asus-blue-hover);
+}
+
+/* =========================================
+   EFECTO CARDS (SECCIONES Y ARTÍCULOS)
+========================================= */
+section, article {
+    background-color: var(--asus-card);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 30px;
+    margin-bottom: 25px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* El resplandor azul al pasar el mouse por encima del contenido */
+section:hover, article:hover {
+    transform: translateY(-4px);
+    border-color: var(--asus-blue);
+    box-shadow: 0 8px 25px rgba(0, 120, 215, 0.15);
+}
+
+
+img {
+    width: 220px;
+    height: 220px; 
+    object-fit: cover; 
+    border-radius: 50%; 
+    border: 2px solid var(--asus-blue);
+    display: block;
+    margin: 0 auto 30px;
+    padding: 5px;
+    background-color: var(--asus-bg);
+    box-shadow: 0 0 20px rgba(0, 120, 215, 0.3);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+    border-color: var(--asus-blue-hover);
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: var(--asus-card);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+th {
+    background-color: #111;
+    color: var(--text-main);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+td strong {
+    color: var(--asus-blue);
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* Efecto hover en las celdas del horario */
+tbody td:hover {
+    background-color: rgba(0, 120, 215, 0.08);
+    color: var(--text-main);
+    cursor: default;
+}
+
+
+footer {
+    text-align: center;
+    padding: 30px 0;
+    border-top: 1px solid var(--border-color);
+    margin-top: 40px;
+}
+
+footer nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    background-color: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    padding: 12px 35px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Botones estilo "Comprar ahora" de la tienda ASUS */
+button:hover {
+    background-color: var(--asus-blue);
+    border-color: var(--asus-blue);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(0, 120, 215, 0.4);
+    transform: translateY(-2px);
+}
+/* =========================================
+   EFECTO CARDS Y ANIMACIÓN DE ENTRADA
+========================================= */
+section, article {
+    background-color: var(--asus-card);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 30px;
+    margin-bottom: 25px;
+    /* Efectos de hover normales */
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    
+    /* Configuración de la animación de entrada */
+    animation: fadeSlideUp 0.7s ease-out forwards;
+    opacity: 0; /* Inician ocultas */
+}
+
+/* El resplandor azul al pasar el mouse */
+section:hover, article:hover {
+    transform: translateY(-6px) !important; /* Importante para sobreescribir la animación base */
+    border-color: var(--asus-blue);
+    box-shadow: 0 8px 25px rgba(0, 120, 215, 0.15);
+}
+
+
+@keyframes fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px); /* Empieza 40px más abajo */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Sube a su posición original */
+    }
+}
+
+/* Opcional: Retrasos escalonados para que no aparezcan todas al mismo tiempo */
+section:nth-of-type(1) { animation-delay: 0.1s; }
+section:nth-of-type(2) { animation-delay: 0.2s; }
+section:nth-of-type(3) { animation-delay: 0.3s; }
+article:nth-of-type(1) { animation-delay: 0.2s; }
+article:nth-of-type(2) { animation-delay: 0.4s; }
+article:nth-of-type(3) { animation-delay: 0.6s; }
